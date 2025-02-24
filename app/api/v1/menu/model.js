@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../../../utils/db.config.js");
 
-const Profil = sequelize.define(
-  "profil",
+const Menu = sequelize.define(
+  "menu",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -26,4 +26,4 @@ const Profil = sequelize.define(
 
 sequelize.sync();
 
-module.exports = Profil;
+module.exports = Menu;

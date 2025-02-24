@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../../../utils/db.config.js");
 
-const Profil = sequelize.define(
-  "profil",
+const Diskon = sequelize.define(
+  "diskon",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -17,7 +17,7 @@ const Profil = sequelize.define(
     updatedAt: {
       type: DataTypes.DATE,
       allowNull: true,
-    }
+    },
   },
   {
     freezeTableName: true,
@@ -26,4 +26,4 @@ const Profil = sequelize.define(
 
 sequelize.sync();
 
-module.exports = Profil;
+module.exports = Diskon;

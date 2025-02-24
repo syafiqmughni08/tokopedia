@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-
+const routerProduk = require("./app/api/v1/produk/router.js");
 
 const app = express()
 app.use(cors())
@@ -14,9 +14,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static(path.join(__dirname, "app/public/uploads")))
 
 
-app.use(patternAPI, )
-app.use(patternAPI, )
-app.use(patternAPI, )
+app.use(patternAPI, routerProduk)
 
 app.listen(3000, () => {
     console.log("Server is running...");
@@ -35,5 +33,5 @@ app.listen(3000, () => {
 //6. READ = nampilin sesuai dengan nama_kategori / KATEGORI
 //7. UPDATE = ngedit data profil / USER (ubah foto, nama, )
 //8. READ = melihat data profil / USER
-//9. READ = melihat daftar history / PRODUK 
+//9. READ = melihat daftar history / HISTORY 
 //10. READ = melihat data flash sale / DISKON
