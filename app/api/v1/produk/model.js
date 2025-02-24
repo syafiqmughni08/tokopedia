@@ -9,37 +9,41 @@ const Produk = sequelize.define("produk",
       primaryKey: true,
       autoIncrement: true,
     },
+    foto_produk: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
     nama_produk: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     harga_awal: {
       type: DataTypes.DECIMAL(10, 2),
-      allowNull: true, // Bisa null jika tidak ada harga diskon
+      allowNull: true, 
     },
     harga_sekarang: {
       type: DataTypes.DECIMAL(10, 2),
-      allowNull: false,
+      allowNull: true,
     },
     deskripsi: {
       type: DataTypes.TEXT,
       allowNull: true,
     },
     text_gratis_ongkir: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
+      type: DataTypes.STRING(20),
+      allowNull: true,
     },
     text_cod: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
+      type: DataTypes.STRING(20),
+      allowNull: true,
     },
     createdAt: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
     },
     updatedAt: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
     }
   },
   {
